@@ -1,0 +1,453 @@
+# ALL MY CODES HAVE BEEN COMMENTED SAPERATELY, SO KINDLY UNCOMMENT IT BEFORE USE
+"""
+'''HEY! EVERYONE WELCOME TO MR. CHUCK SPADINA's GALLERY 
+first off it is important to say that we are on record to learn about turtle module 
+
+ABOUT ME : Have you ever seen code so bad it made you laugh.. 
+Anyway im a organism that converts caffein to code
+
+
+Turtle graphics is a popular way for introducing programming to kids. Virtual turtles can be programmed to move around the screen. The turtle draws lines as it moves. The "turtle" could look like the turtle animal, an arrow, or be invisibile. The user can write turtle programs that draw beautiful shapes and learn to program at the same time.
+
+The original Turtle software was developed by Wally Feurzig and Seymour Papert in 1966.
+
+This tutorial only explains Python's turtle.py module. It does not explain the Python programming language.
+
+
+“Turtle” is a python feature like a drawing board, which lets you command a turtle to draw all over it!
+
+You can use functions like turtle.forward(...) and turtle.left(...) which can move the turtle around.
+
+Before you can use turtle, you have to import it. We recommend playing around with it in the interactive interpreter first, as there is an extra bit of work required to make it work from files.
+
+
+"""
+
+
+
+
+
+"""
+#graphics
+
+
+import turtle as t
+print(dir(t))
+
+"""
+#help('turtle.shape')
+
+
+
+
+"""
+# forward () / fd() is used to move turtle forward and is written in fd().
+
+import turtle as t
+t.fd(100)
+"""
+
+
+
+
+"""
+# backward () / bk() is used to move turtle backward and is written in bk().
+
+import turtle as t
+t.fd(100)
+t.bk(50)
+"""
+
+
+
+
+""" # PENSIZE AND PENCOLOR
+import turtle as t
+t.fd(100)
+t.pensize(20)
+#t.pencolor("red")
+t.fd(200)
+t.done()
+"""
+"""#CONTINOUS INCREASE IN THE SIZE OF PEN
+import turtle as t
+t.color("red","green")
+for i in range(0,10):
+	t.pensize(i)
+	t.fd(10)
+t.done()
+"""
+
+
+
+"""
+# right() / rt()  and  left() / lt()  is used to move turtle
+# right sid and lift side.
+
+import turtle as t
+t.left(90)
+t.fd(100)
+#t.stamp()
+t.right(90)
+t.fd(100)
+t.left(90)
+#t.left(270)
+t.fd(100)
+t.right(90)
+t.fd(100)
+#t.home()
+#t.undo()
+"""
+
+"""
+#NORMAL SQUARE SPIRAL
+
+import turtle as t
+for i in range(0,500):
+	t.fd(i)
+	t.lt(91)
+"""
+
+"""
+
+#SPIRAL
+import turtle as t
+t.speed(0)
+for i in range(500): # this "for" loop will repeat these functions 500 times
+    t.forward(i)
+    t.left(91)
+
+
+"""
+"""
+'''
+goto() / setposition() / setpos()
+
+we can move the turtle to a specific position with the graphics window
+by using the setposition() method (or alies setpos() or goto()). setposition()'s
+arguments are the desired x and y values. the change of position does not
+affect the tutle's heading'
+'''
+
+import turtle as t
+t.pos() # run on cmd
+
+t.setpos(60,30) # run on cmd
+t.pos() #run on cmd
+"""
+  
+""" ANGLES
+from turtle import *
+
+for angle in range(0, 360, 15):
+    setheading(angle)
+    forward(100)
+    write(str(angle) + '°')
+    backward(100)
+"""
+
+
+"""
+'''
+setx() and sety()
+setx() method set the first coordinate to x and do not change
+the second coordinate.
+
+sety() method set the second coordinate to x and do not change
+the first coordinate value.
+'''
+import turtle as t
+t.setpos(60,30) # run on cmd
+t.pos() #run on cmd
+t.setx(20)# run on cmd
+t.pos()# run on cmd
+t.sety(100)# run on cmd
+t.pos()# run on cmd
+"""
+
+
+"""
+
+
+'''
+
+setheading() / seth()
+is used to set the orientation of the turle  to to_angle.
+
+standared mode   logo mode
+0-east           0-north
+90-north         90-east
+180-west         180-south
+270-south         270-west
+
+'''
+
+import turtle as t
+t.setheading(90)
+t.heading()
+"""
+
+
+
+"""
+
+'''
+home()
+
+is used to move the turle to the origin that is coordinates(0,0)- and it
+sets the heading to its start orientation.
+'''
+
+import turtle as t
+#t.setpos(0,220)
+t.pos() #run on cmd
+t.home()  #run on cmd
+t.pos()  #run on cmd
+
+t.done()
+
+"""
+
+
+"""
+
+
+'''
+circle()
+is used to draw the circle. if we want to draw the full circle then simply
+write the radius and if we want to draw the half cirlce then give the radius
+and the angle to determine which part of the circle we want to draw.
+'''
+
+
+import turtle as t
+t.circle(130) # draw circle counterclockwises with radius 130.
+
+t.circle(-80)
+
+
+"""
+
+
+
+
+"""
+
+
+
+#RAINBOW SPIRAL
+
+# Python program to draw  
+# Rainbow Benzene 
+# using Turtle Programming 
+
+import turtle as t
+
+colors = ['red', 'purple', 'blue', 'green', 'orange', 'yellow'] 
+
+
+
+t.bgcolor('black') 
+
+for x in range(360): 
+
+    t.pencolor(colors[x%6]) 
+
+    t.width(x/100 + 1) 
+
+    t.forward(x) 
+
+    t.left(59) 
+"""
+
+
+
+
+""" #EMOTAG
+import turtle as t
+
+window=t.Screen()
+arthur=t.Turtle()
+window.colormode(255)
+arthur=t.speed(10)
+window.bgcolor(50,0,70)
+t.pencolor(255,255,0)
+t.circle(120)
+t.penup()
+t.lt(90)
+t.fd(80)
+t.pendown()
+t.rt(90)
+t.circle(40)
+t.penup()
+t.lt(90)
+t.fd(25)
+t.pendown()
+t.rt(90)
+t.circle(15)
+t.penup()
+t.fd(250)
+t.rt(90)
+t.fd(100)
+t.lt(90)
+t.pendown()
+
+t.circle(120,)
+t.penup()
+t.lt(90)
+t.fd(80)
+t.pendown()
+t.rt(90)
+t.circle(40)
+t.penup()
+t.lt(90)
+t.fd(25)
+t.pendown()
+t.rt(90)
+t.circle(15)
+t.penup()
+t.rt(120)
+t.fd(180)
+t.rt(90)
+t.pendown()
+t.circle(60)
+t.penup()
+t.lt(55)
+t.fd(110)
+t.pendown()
+t.circle(25)
+t.penup()
+t.fd(200)
+t.lt(90)
+t.pendown()
+t.circle(270,132)
+t.penup()
+t.rt(60)
+t.fd(90)
+t.pendown()
+t.lt(63)
+t.begin_fill()
+t.circle(360)
+t.done()
+"""
+
+"""
+
+# FLOWER PATTERN
+import turtle as t
+t.color("red","yellow")
+t.begin_fill()
+t.speed(0)
+for i in range(50):
+    t.forward(300)
+    t.left(170)
+t.hideturtle()
+t.end_fill()
+t.done()
+
+"""
+"""
+#  STAR PATTERN
+import turtle as t
+t.speed(0)
+
+t.getscreen().bgcolor("#994444")
+t.penup()
+t.goto((-200,100))
+t.pendown()
+
+def star(turtle, size):
+	if size <= 10:
+		return
+	else:
+		t.begin_fill()
+		for i in range(5):
+
+			t.forward(size)
+			star(turtle, size/3)
+			t.left(216)
+		t.end_fill()
+
+star(t, 360)
+
+t.done()
+ 
+
+"""
+
+
+"""# SQUARE USING SET HEADING
+
+import turtle as t
+
+t.color("blue", "cyan")
+
+# Square
+t.begin_fill()
+t.forward(100)
+t.setheading(90)
+t.forward(100)
+t.setheading(180)
+t.forward(100)
+t.setheading(270)
+t.forward(100)
+t.end_fill()
+
+t.penup()
+t.setheading(270)
+t.forward(120)
+t.pendown()
+
+t.begin_fill()
+t.setheading(0)
+t.forward(100)
+t.setheading(90)
+t.forward(100)
+t.setheading(180)
+t.forward(100)
+t.setheading(270)
+t.forward(100)
+t.end_fill()
+
+t.done()
+"""
+
+
+
+
+"""#SINUSOID
+import turtle 
+import math
+import random
+
+we= turtle.Turtle()
+turtle.colormode(255)
+we.speed(0)
+
+for i in range(2000):
+	we.forward(10)
+	we.left(math.sin(i/10)*25)
+	we.left(20)
+
+turtle.done()
+"""
+
+
+
+
+
+"""#SQUARE ROOT
+import turtle
+import math
+import random
+
+bob = turtle.Turtle()
+turtle.colormode(255)
+bob.speed(0)
+
+for i in range(2000):
+	bob.forward(math.sqrt(i))
+	bob.left(i%180)
+
+turtle.done()
+"""
